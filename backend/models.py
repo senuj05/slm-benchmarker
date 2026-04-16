@@ -8,10 +8,10 @@ class BenchmarkResponse(BaseModel):
 
 
 class ModelMetrics(BaseModel):
-    model_name: str
-    tokens_per_second: float
-    time_to_first_token: float
-    memory_used_mb: float
-    promt_used: str
-    raw_response: str
+    model_name: str                     # The name of the model being benchmarked
+    tokens_per_second: float            # The number of tokens generated per second
+    time_to_first_token: float          # The time it takes to receive the first token from the model after sending a prompt [end_time - start_time]
+    memory_used_mb: float 
+    prompt_used: str                    # The prompt that was sent to the model
+    raw_response: str                   # The raw response received from the model (before parsing)  
     
