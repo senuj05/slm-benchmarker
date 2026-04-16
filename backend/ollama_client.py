@@ -44,6 +44,10 @@ def call_model(model_name: str, user_prompt: str):
     memory_after =psutil.virtual_memory().used / (1024 * 1024)
     memory_used = memory_after - memory_before
 
+    # Calculating tokens per second
+    total_tokens = len(raw_text.split())
+    tokens_per_second = total_tokens / time_to_first_token if time_to_first_token > 0 else 0
+
     # Fix word count: Since the model is smaller the accracy of the model 
     # response is low
     try:
@@ -55,7 +59,7 @@ def call_model(model_name: str, user_prompt: str):
 
     model_metrics = ModelMetrics(
         model_name = model_name,
-        tokens_per_second = 0,
+        tokens_per_second = tokens_per_second,
         time_to_first_token = time_to_first_token,
         memory_used_mb = memory_used,
         prompt_used= user_prompt,
