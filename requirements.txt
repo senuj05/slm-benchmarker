@@ -1,0 +1,5 @@
+ollama
+pydantic
+flask
+flask-cors
+psutil
