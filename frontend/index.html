@@ -2,36 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local SLM Benchmarker</title>
+
+    <link rel="stylesheet" href="styles.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <header>
-        <h1>Local SLM Benchmarker</h1>
-        <p class="subheading"> Run AI entirely offline on your Mac. No internet, No cost. Compare 3 models.</p>
-    </header>
 
-    <!-- The 3 models -->
-     <section id="models-section" >
-        <p class="section-label">Choose a model</p>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <p class="sidebar-logo">SLM Benchmarker</p>
+            <!-- <p class="sidebar-sub">Talk to your AI locally</p> -->
+        </div>
 
-        <div class="models-grid">
-            
-            <div class="model-card" id="card-0">
-                <!-- model name -->
-                <div class ="card-top">
-                    <span class="model-name">llama3.2:1b</span>
-                    <span class="tag tag-green">Fastest</span>
-                </div>
-                <!-- stats -->
-                <div class="stats-row">
-                    <div class="stats-box">
-                        <p class="stats-label">Speed</p>
-                        <p></p>
-                    </div>
+        <nav>
+            <div class="models">
+                <p class="model-names">Models</p>
+                <button class="nav-item">
+                    <div class="model-icon-mistrel"></div>
+                    <p class="model-mistrel">MISTREL</p>
+                </button>
+                <button class="nav-item">
+                    <div class="model-icon-llama"></div>      
+                    <p class="model-llama">LLAMA3.2:3b</p>
+                </button>
+                <button class="nav-item">
+                    <div class="model-icon-phi4-mini "></div>
+                    <p class="model-phi4-mini">PHI-4-MINI:latest</p>
+                </button>
+
+            </div>
+
+            <div class="views">
+                <p class="views-title">Views</p>
+                <div class="views-items">
+                    <button class="nav-item">chat+ run</button>
+                    <button class="nav-item">benchmark</button>
+                    <button class="nav-item">compare all 3</button>
                 </div>
             </div>
+
+            <div class="navbar-bottom">
+                <div class="status-row">
+                    <p class="status-text">Model Running:</p>
+                    <div class="status-dot" id="ollama-icon"></div>
+                    <span id="ollama-status">checking ollama...</span>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="welcome-screen">
+            <h2>Welcome to SLM Benchmarker</h2>
+            <p>Choose a model and view to get started</p>
         </div>
-     </section>
+
+        <div>
+
+        </div>
+    </main>
+
 
 </body>
 </html>

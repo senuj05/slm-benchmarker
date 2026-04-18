@@ -1,0 +1,161 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+.sidebar{
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+    height: 100vh;
+    background: #d9d7d7;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    color: rgb(5, 51, 110);
+    box-sizing: border-box;
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px 12px;
+    border-bottom: 1px solid #c9c9c9;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* models styling  */
+
+.model-names, .views-title, .status-text{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #888888;
+    letter-spacing: 1px;
+    margin: 0 0 4px 0;
+}
+
+.models{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 16px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+/* model icons styling  */
+.model-icon-mistrel{
+    width: 12px;
+    height:12px;
+    border-radius: 50%;
+    background: #0e8a12;
+    margin-right: 8px;
+}
+
+.model-icon-llama{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(192, 87, 17);
+    margin-right: 8px;
+}
+
+.model-icon-phi4-mini{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(5, 109, 133);
+    margin-right: 8px;
+}
+
+/* nav-item styling */
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    padding: 6px 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #000000;
+    border-radius: 6px;
+
+}
+
+.navbar-bottom{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    right: 10px;
+    background: #f0f0f0;
+}
+
+.nav-item:hover{
+    background: #fdfdfd;
+    color: #000000;
+}
+
+/* views styling */
+
+.views{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 16px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #c9c9c9;
+    
+}
+
+.views-items{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0px;
+}
+
+/* nav-bar-bottom styling  */
+.navbar-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 16px 14px 12px;
+
+}
+
+/* Status styling */
+
+.status-dot-online {
+    background-color: #22c55e;
+}
+
+.status-dot-offline {
+    background-color: #ef4444;
+}
+
+.status-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
