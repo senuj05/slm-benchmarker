@@ -47,9 +47,8 @@
 
             <div class="navbar-bottom">
                 <div class="status-row">
-                    <p class="status-text">Model Running:</p>
                     <div class="status-dot" id="ollama-icon"></div>
-                    <span id="ollama-status">checking ollama...</span>
+                    <span id="model-status">Model Running:</span>
                 </div>
             </div>
         </nav>
@@ -66,7 +65,7 @@
             </div>
             <div class="topbar-right">
                 <button class="topbar-btn">new run</button>
-                <button class="compare-btn">compare all 3</button>
+                <button class="topbar-btn">compare all 3</button>
             </div>
         </div>
         <!-- Metrics Strip -->
@@ -87,16 +86,18 @@
 
         <!-- Chat Area -->
         <div class="chat-messages">
-            <div class="message-avatar">AI</div>
-            <div class="message-body">
-                <p>Hello! How can I help you today?</p>
+            <div class="message">
+                <div class="message-avatar">AI</div>
+                <div class="message-body">
+                    <p>Hello! How can I help you today?</p>
+                </div>
             </div>
         </div>
 
-        <!-- User input area   -->
-        <div class="chat-input-area">
-            <input type="text" class="chat-input" placeholder="type your question..."></input>
-            <button class="submit-btn">Submit</button>
+        <!-- User input area -->
+        <div class="chat-input-bar">
+            <input type="text" class="chat-input" placeholder="ask the ai something..." />
+            <button class="send-btn">&#8593;</button>
         </div>
 
     </main>
