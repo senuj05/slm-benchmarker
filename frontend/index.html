@@ -56,14 +56,49 @@
     </aside>
 
     <main class="main-content">
-        <div class="welcome-screen">
-            <h2>Welcome to SLM Benchmarker</h2>
-            <p>Choose a model and view to get started</p>
+
+        <!-- Top Bar -->
+        <div class="chat-topbar">
+            <div class="topbar-left">
+                <span class="active-model">MISTREL: 7b</span>
+                <span class="model-tag"> best quality</span>
+                <span class="speed-tag"> -14 tokens/s</span>
+            </div>
+            <div class="topbar-right">
+                <button class="topbar-btn">new run</button>
+                <button class="compare-btn">compare all 3</button>
+            </div>
+        </div>
+        <!-- Metrics Strip -->
+         <div class="metrics-strip">
+            <div class="metric-card">
+                <p class="metric-label">last tok/s</p>
+                <p class="metric-value">17.1</p>
+            </div>
+            <div class="metric-card">
+                <p class="metric-label">ttft</p>
+                <p class="metric-value">3.4s</p>
+            </div>
+            <div class="metric-card">
+                <p class="metric-label">memory</p>
+                <p class="metric-value">4.1 GB</p>
+            </div>
+         </div>
+
+        <!-- Chat Area -->
+        <div class="chat-messages">
+            <div class="message-avatar">AI</div>
+            <div class="message-body">
+                <p>Hello! How can I help you today?</p>
+            </div>
         </div>
 
-        <div>
-
+        <!-- User input area   -->
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" placeholder="type your question..."></input>
+            <button class="submit-btn">Submit</button>
         </div>
+
     </main>
 
 
