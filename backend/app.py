@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from backend.ollama_client import call_model 
 from backend.models import BenchmarkResponse, ModelMetrics
@@ -6,6 +7,15 @@ from backend.models import BenchmarkResponse, ModelMetrics
 
 # create an instance of the FASTAPI app
 app= FastAPI()
+
+# add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 # implement CRUD operations for the API
 
