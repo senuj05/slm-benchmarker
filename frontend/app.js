@@ -46,6 +46,9 @@ document.querySelectorAll('.nav-item').forEach((model)=>{
     model.addEventListener('click',() =>{
         selectModel = model.querySelector("p").textContent;
         // test: console.log(selectModel)
+        // Adding the active model name to the top bar when the model is selected
+        const activeModelName = document.getElementById("active-model-name")
+        activeModelName.textContent =selectModel
     });
 });
 
