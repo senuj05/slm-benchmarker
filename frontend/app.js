@@ -74,3 +74,22 @@ newRunBtn.addEventListener("click",function(){
     memory.textContent =0
 
 })
+
+
+// check the status
+async function checkStatus(){
+    const url = "http://localhost:8000/"
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response Status: ${response.status}`);
+        }
+        await response.json();
+        document.getElementById("ollama-icon").style.background = "#22c55e"
+    } catch (error) {
+        document.getElementById("ollama-icon").style.background = "#ef4444"
+    }
+}
+
+checkStatus()
+setInterval(checkStatus, 5000)
