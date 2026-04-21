@@ -6,6 +6,11 @@ const chatMessages = document.getElementById("chat-messages")
 // create a new message element with the input value,then append it to the chat messages container
 
 sendButton.addEventListener("click", async function(){
+    //error handling for empty input:
+    if (selectModel === "" || selectModel === null){
+        alert ("Please select a model first");
+        return; //function stops 
+    }
     const newMessage = document.createElement("div")
     newMessage.innerHTML =`<div class="message-avatar">you</div><div class="message-body"><p>${chatInput.value}</p></div>`
     chatMessages.appendChild(newMessage)
@@ -82,14 +87,18 @@ async function checkStatus(){
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Response Status: ${response.status}`);
+            throw new Error("Something went wrong. Please Try again.");
         }
         await response.json();
         document.getElementById("ollama-icon").style.background = "#22c55e"
     } catch (error) {
         document.getElementById("ollama-icon").style.background = "#ef4444"
     }
+
+    
 }
 
 checkStatus()
 setInterval(checkStatus, 5000)
+
+
