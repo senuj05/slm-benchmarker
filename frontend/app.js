@@ -9,6 +9,13 @@ sendButton.addEventListener("click", async function(){
     const newMessage = document.createElement("div")
     newMessage.innerHTML =`<div class="message-avatar">you</div><div class="message-body"><p>${chatInput.value}</p></div>`
     chatMessages.appendChild(newMessage)
+
+    // loading state for the ai response
+    const loadingMessage = document.createElement("div")
+    loadingMessage.id = "loading-msg"
+    loadingMessage.innerHTML =  `<img src="images/loading.gif" width="60" />`
+    chatMessages.appendChild(loadingMessage)
+
     const response = await fetch("http://localhost:8000/benchmark", {
         method: "POST",
         headers: {
@@ -35,6 +42,9 @@ sendButton.addEventListener("click", async function(){
     const aiMessage =document.createElement("div")
     aiMessage.innerHTML = `<div class="message-avatar">AI</div><div class="message-body"><p>${parsed.answer}</p></div>`
     chatMessages.appendChild(aiMessage)
+
+    // remove the loading gif when the ai reply appears
+    document.getElementById("loading-msg").remove()
     // testing purposes: console.log(data)
     chatInput.value =""
 })
