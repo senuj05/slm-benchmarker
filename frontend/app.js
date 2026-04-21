@@ -52,3 +52,15 @@ document.querySelectorAll('.nav-item').forEach((model)=>{
     });
 });
 
+// Add event listern to the new run button to clear the chat and reset the stats
+const newRunBtn = document.getElementById("new-run-btn")
+newRunBtn.addEventListener("click",function(){
+    chatMessages.innerHTML =""
+    const tokens_per_second = document.getElementById("metric-toks")
+    const ttft = document.getElementById("metric-ttft")
+    const memory = document.getElementById("metric-memory")
+    tokens_per_second.textContent = 0
+    ttft.textContent = 0
+    memory.textContent =0
+
+})
