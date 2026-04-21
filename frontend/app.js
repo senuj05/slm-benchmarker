@@ -24,6 +24,14 @@ sendButton.addEventListener("click", async function(){
     // console.log(data)
     const dataObj =JSON.parse(data)
     const parsed = JSON.parse(dataObj.raw_response)
+    const tokens_per_second = document.getElementById("metric-toks")
+    const ttft = document.getElementById("metric-ttft")
+    const memory = document.getElementById("metric-memory") 
+    // update the metrics in the ui with the actual stats from the response
+    tokens_per_second.textContent = dataObj.tokens_per_second
+    ttft.textContent = dataObj.time_to_first_token
+    memory.textContent = dataObj.memory_used_mb
+
     const aiMessage =document.createElement("div")
     aiMessage.innerHTML = `<div class="message-avatar">AI</div><div class="message-body"><p>${parsed.answer}</p></div>`
     chatMessages.appendChild(aiMessage)
