@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    background: white;
+    color: black;
+    min-height: 100vh;
+    padding: 40px 32px;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.header-section h1{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.header-section p {
+    font-size: 13px;
+    color: #888888
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.input-section input:focus{
+    border-color: #888888;
+}
+
+.input-section button{
+    padding: 10px 20px;
+    background: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', 'sns-serif';
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.input-section button:hover{
+    background: #888888;
+}
+
+.cards-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card1{
+    flex: 1;
+    max-width: 340px;
+    background: #f9f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.card1 h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card1 p{
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.6;
+}
+
+.card1 span{
+    font-weight: 700;
+    
+}
+
+.back-to-home {
+    display: inline-block;
+    padding: 10px 40px;
+    background: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', 'sns-serif';
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.back-to-home:hover {
+    background: #888888;
+    color: white;
+}

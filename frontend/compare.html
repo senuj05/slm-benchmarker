@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare All 3 Models</title>
+
+    <link rel="stylesheet" href= "compare.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="header-section">
+        <h1>Compare All 3 Models</h1>
+        <p>Compare the performance of all 3 models based on the metrics:</p>
+
+    </div>
+    <div class="input-section">
+        <input type="text" id="compare-input" placeholder="Enter a prompt to compare models..." />
+        <button id="compare-btn">Compare Models</button>
+    </div>
+    <div class="cards-container">
+        <div class="card1" id="model1-card">
+            <h2>mistral:latest</h2>
+            <p><strong>Last Tokens/s:</strong> <span id="model1-toks">-</span></p>
+            <p><strong>Time to First Token:</strong> <span id="model1-ttft">-</span></p>
+            <p><strong>Memory Used:</strong> <span id="model1-memory">-</span></p>
+            <p><strong>Answer:</strong> <span id="model1-answer">-</span></p>
+
+
+        </div>
+        <div class="card1" id="model2-card">
+            <h2>llama3.2:3b</h2>
+            <p><strong>Last Tokens/s:</strong> <span id="model2-toks">-</span></p>
+            <p><strong>Time to First Token:</strong> <span id="model2-ttft">-</span></p>
+            <p><strong>Memory Used:</strong> <span id="model2-memory">-</span></p>
+            <p><strong>Answer:</strong> <span id="model2-answer">-</span></p>
+        </div>
+        <div class="card1" id="model3-card">
+            <h2>phi-4-mini:latest</h2>
+            <p><strong>Last Tokens/s:</strong> <span id="model3-toks">-</span></p>
+            <p><strong>Time to First Token:</strong> <span id="model3-ttft">-</span></p>
+            <p><strong>Memory Used:</strong> <span id="model3-memory">-</span></p>
+            <p><strong>Answer:</strong> <span id="model3-answer">-</span></p>   
+        </div>
+        
+    </div>
+    <div class="back-to-home">
+        <a href="index.html">Back to Home</a>
+    </div>
+    <script src="compare.js"></script>
+</body>
+</html>
