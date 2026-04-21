@@ -1,6 +1,8 @@
 # Local SLM Benchmarker
 
 A web app for benchmarking and comparing local small language models (SLMs) running via Ollama.
+
+
 <img width="1479" height="755" alt="Screenshot 2026-04-21 at 6 06 02 PM" src="https://github.com/user-attachments/assets/7349731e-5c28-48f6-ac04-cabe6e2e71df" />
 ## Features
 
